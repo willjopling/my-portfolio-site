@@ -1,0 +1,6 @@
+.title-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom-style: solid;
+}
