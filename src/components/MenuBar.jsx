@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 });
 
 export default function MenuBar(props) {
-  const [selectedOption, setSelectedOption] = useState("projects");
+  const [selectedOption, setSelectedOption] = useState("home");
 
   const classes = useStyles();
 

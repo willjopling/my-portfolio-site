@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+import { Typography, Slide } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -18,7 +18,9 @@ export default function Home() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Typography variant="h1">Hi, I'm Will...</Typography>
+      <Slide in="true" direction="left" timeout={500}>
+        <Typography variant="h1">Hi, I'm Will...</Typography>
+      </Slide>
     </div>
   );
 }

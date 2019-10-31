@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import TextField from "@material-ui/core/TextField";
+import { TextField, Paper, Slide, Typography } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     background: "blue",
     position: "fixed",
@@ -16,8 +16,15 @@ const useStyles = makeStyles({
   messageContainer: {
     display: "flex",
     flexDirection: "column"
+  },
+
+  msgNote: {
+    padding: theme.spacing(3, 2),
+    width: "500px",
+    display: "flex",
+    flexDirection: "column"
   }
-});
+}));
 
 export default function Contact() {
   const classes = useStyles();
@@ -25,12 +32,26 @@ export default function Contact() {
   return (
     <div className={classes.root}>
       <div>
-        <h1>Contact</h1>
+        <Slide in="true" direction="left" timeout={600}>
+          <Typography variant="h1">Contact</Typography>
+        </Slide>
       </div>
       <div>
-        <form className={classes.messageContainer}>
-          <TextField id="standard-basic" label="Email" />
-          <TextField id="standard-multiline-flexible" label="Message" />
+        <form>
+          <Slide in="true" direction="left" timeout={500}>
+            <Paper className={classes.msgNote}>
+              <TextField id="standard-basic" label="Email" />
+              <TextField
+                id="outlined-multiline-static"
+                label="Message"
+                multiline
+                rows="4"
+                className={classes.textField}
+                margin="normal"
+                variant="outlined"
+              />
+            </Paper>
+          </Slide>
         </form>
       </div>
     </div>

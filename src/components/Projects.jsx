@@ -2,7 +2,7 @@ import React from "react";
 import ProjectNote from "./ProjectNote";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+import { Typography, Slide } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -22,15 +22,19 @@ export default function Projects(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div>
-        <Typography variant="h1">Projects</Typography>
-      </div>
-      <div>
-        <ProjectNote
-          title="project 2"
-          description="a description about the project"
-        />
-      </div>
+      <Slide in="true" direction="left" timeout={700}>
+        <div>
+          <Typography variant="h1">Projects</Typography>
+        </div>
+      </Slide>
+      <Slide in="true" direction="left" timeout={400}>
+        <div>
+          <ProjectNote
+            title="project 2"
+            description="a description about the project"
+          />
+        </div>
+      </Slide>
     </div>
   );
 }
