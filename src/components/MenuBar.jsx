@@ -8,6 +8,8 @@ import { makeStyles } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 
 import Projects from "./Projects";
+import Home from "./Home";
+import Contact from "./Contact";
 
 const useStyles = makeStyles({
   icon: {
@@ -24,15 +26,31 @@ export default function MenuBar(props) {
     <div id="app-container">
       <ul id="menu-bar">
         <li>
-          <IconButton>
+          <IconButton
+            onClick={() => {
+              setSelectedOption("home");
+            }}
+          >
             <HomeIcon />
           </IconButton>
         </li>
         <li>
-          <BuildIcon />
+          <IconButton
+            onClick={() => {
+              setSelectedOption("projects");
+            }}
+          >
+            <BuildIcon />
+          </IconButton>
         </li>
         <li>
-          <MailIcon />
+          <IconButton
+            onClick={() => {
+              setSelectedOption("contact");
+            }}
+          >
+            <MailIcon />
+          </IconButton>
         </li>
       </ul>
       <div id="display-container">{display(selectedOption)}</div>
@@ -46,6 +64,20 @@ const display = props => {
       return (
         <div>
           <Projects />
+        </div>
+      );
+
+    case "home":
+      return (
+        <div>
+          <Home />
+        </div>
+      );
+
+    case "contact":
+      return (
+        <div>
+          <Contact />
         </div>
       );
   }
