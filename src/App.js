@@ -1,12 +1,11 @@
 import React from "react";
 import "./stylesheets/App.css";
-
-import Title from "./components/Title";
+import MenuBar from "./components/MenuBar";
 
 function App() {
   return (
     <div>
-      <Title />
+      <MenuBar />
     </div>
   );
 }
