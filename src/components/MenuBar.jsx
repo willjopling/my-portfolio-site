@@ -11,11 +11,10 @@ import Projects from "./Projects";
 import Home from "./Home";
 import Contact from "./Contact";
 
-const useStyles = makeStyles({
-  icon: {
-    color: "blue"
-  }
-});
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+
+const useStyles = makeStyles();
 
 export default function MenuBar(props) {
   const [selectedOption, setSelectedOption] = useState("home");
@@ -23,37 +22,39 @@ export default function MenuBar(props) {
   const classes = useStyles();
 
   return (
-    <div id="app-container">
-      <ul id="menu-bar">
-        <li>
-          <IconButton
-            onClick={() => {
-              setSelectedOption("home");
-            }}
-          >
-            <HomeIcon />
-          </IconButton>
-        </li>
-        <li>
-          <IconButton
-            onClick={() => {
-              setSelectedOption("projects");
-            }}
-          >
-            <BuildIcon />
-          </IconButton>
-        </li>
-        <li>
-          <IconButton
-            onClick={() => {
-              setSelectedOption("contact");
-            }}
-          >
-            <MailIcon />
-          </IconButton>
-        </li>
-      </ul>
-      <div id="display-container">{display(selectedOption)}</div>
+    <div>
+      <div id="app-container">
+        <ul id="menu-bar">
+          <li>
+            <IconButton
+              onClick={() => {
+                setSelectedOption("home");
+              }}
+            >
+              <HomeIcon />
+            </IconButton>
+          </li>
+          <li>
+            <IconButton
+              onClick={() => {
+                setSelectedOption("projects");
+              }}
+            >
+              <BuildIcon />
+            </IconButton>
+          </li>
+          <li>
+            <IconButton
+              onClick={() => {
+                setSelectedOption("contact");
+              }}
+            >
+              <MailIcon />
+            </IconButton>
+          </li>
+        </ul>
+        <div id="display-container">{display(selectedOption)}</div>
+      </div>
     </div>
   );
 }

@@ -4,7 +4,6 @@ import { TextField, Paper, Slide, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: "blue",
     position: "fixed",
     height: "100%",
     width: "100%",

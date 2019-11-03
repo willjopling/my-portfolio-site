@@ -13,8 +13,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around",
-    alignItems: "center",
-    background: "blue"
+    alignItems: "center"
   }
 });
 
