@@ -6,6 +6,7 @@ import BuildIcon from "@material-ui/icons/Build";
 import MailIcon from "@material-ui/icons/Mail";
 import { makeStyles } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
+import Button from "@material-ui/core/Button";
 
 import Projects from "./Projects";
 import Home from "./Home";
@@ -14,7 +15,11 @@ import Contact from "./Contact";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
-const useStyles = makeStyles();
+const useStyles = makeStyles({
+  icon: {
+    color: "white"
+  }
+});
 
 export default function MenuBar(props) {
   const [selectedOption, setSelectedOption] = useState("home");
@@ -26,31 +31,50 @@ export default function MenuBar(props) {
       <div id="app-container">
         <ul id="menu-bar">
           <li>
-            <IconButton
+            <Button
+              variant="outlined"
+              color="primary"
               onClick={() => {
                 setSelectedOption("home");
               }}
+              endIcon={<HomeIcon />}
             >
-              <HomeIcon />
-            </IconButton>
+              About
+            </Button>
           </li>
           <li>
-            <IconButton
+            <Button
+              variant="outlined"
+              color="primary"
               onClick={() => {
                 setSelectedOption("projects");
               }}
+              endIcon={<BuildIcon />}
             >
-              <BuildIcon />
-            </IconButton>
+              Projects
+            </Button>
           </li>
           <li>
-            <IconButton
+            <Button
+              variant="outlined"
+              color="primary"
               onClick={() => {
                 setSelectedOption("contact");
               }}
+              endIcon={<MailIcon />}
             >
-              <MailIcon />
-            </IconButton>
+              Contact
+            </Button>
+          </li>
+          <li>
+            <div>
+              <IconButton>
+                <GitHubIcon className={classes.icon} />
+              </IconButton>
+              <IconButton>
+                <LinkedInIcon className={classes.icon} />
+              </IconButton>
+            </div>
           </li>
         </ul>
         <div id="display-container">{display(selectedOption)}</div>
