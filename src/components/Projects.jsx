@@ -29,8 +29,9 @@ export default function Projects(props) {
       <Slide in="true" direction="left" timeout={1200}>
         <div>
           <ProjectNote
-            title="project 2"
-            description="a description about the project"
+            title="DND Character Sheet"
+            description="An online character sheet for the table top board game 'Dungeons and Dragons'."
+            source={require("./untit.jpg")}
           />
         </div>
       </Slide>

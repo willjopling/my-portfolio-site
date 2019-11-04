@@ -16,6 +16,9 @@ const useStyles = makeStyles({
     height: 0,
     paddingTop: "56.25%",
     marginTop: "30"
+  },
+  title: {
+    color: "black"
   }
 });
 
@@ -35,7 +38,12 @@ export default function ProjectNote(props) {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h2"
+            className={classes.title}
+          >
             {props.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
