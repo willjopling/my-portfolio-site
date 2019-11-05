@@ -77,7 +77,9 @@ export default function MenuBar(props) {
             </div>
           </li>
         </ul>
+
         <div id="display-container">{display(selectedOption)}</div>
+        <div className="page-background"></div>
       </div>
     </div>
   );
