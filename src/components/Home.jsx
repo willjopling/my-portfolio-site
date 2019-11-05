@@ -1,17 +1,21 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Slide, Fade } from "@material-ui/core";
+import "../stylesheets/App.css";
 
 const useStyles = makeStyles({
   root: {
     position: "fixed",
+    marginLeft: "2em",
+    marginRight: "3em",
     height: "100%",
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-around",
-    alignItems: "center",
-    overflow: "auto"
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    overflow: "auto",
+    boxSizing: "border-box"
   },
   banner: {
     justifySelf: "flex-end",
@@ -25,7 +29,7 @@ const useStyles = makeStyles({
   },
   about: {
     justifySelf: "center",
-    width: "80%",
+    width: "70%",
     overflow: "visible",
     position: "relative",
     display: "flex",
@@ -39,7 +43,8 @@ const useStyles = makeStyles({
       width: "120px",
       height: "120px"
     },
-    transition: "1s ease "
+    transition: "1s ease ",
+    alignSelf: "flex-end"
   }
 });
 
@@ -56,7 +61,7 @@ export default function Home() {
       <Slide in="true" direction="left" timeout={1200}>
         <div className={classes.about}>
           <h4>Front End Developer.</h4>
-          <p>
+          <p style={{ fontSize: "1em" }}>
             Since graduating University, I have dedicated as much time as I
             could to learning programming and the challenges that come with
             developing software and have found that there is a lot of

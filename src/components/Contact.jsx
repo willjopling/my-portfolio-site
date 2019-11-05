@@ -10,7 +10,9 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "flex-start",
+
+    marginLeft: "2em"
   },
   title: {
     "&:before": {
@@ -24,11 +26,11 @@ const useStyles = makeStyles(theme => ({
 
   msgNote: {
     padding: "10px",
-    width: "500px",
-    height: "300px",
+    width: "300px",
+    height: "400px",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     background: "#1a1a1a"
   },
   sendButton: {

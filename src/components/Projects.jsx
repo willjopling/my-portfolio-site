@@ -7,13 +7,21 @@ import { Typography, Slide } from "@material-ui/core";
 const useStyles = makeStyles({
   root: {
     position: "fixed",
-
     width: "100%",
     height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "flex-start",
+    marginLeft: "2em",
+    boxSizing: "border-box"
+  },
+
+  projectsBanner: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr ",
+
+    width: "80%"
   }
 });
 
@@ -27,11 +35,15 @@ export default function Projects(props) {
         </div>
       </Slide>
       <Slide in="true" direction="left" timeout={1200}>
-        <div>
+        <div className={classes.projectsBanner}>
           <ProjectNote
             title="DND Character Sheet"
             description="An online character sheet for the table top board game 'Dungeons and Dragons'."
             source={require("./untit.jpg")}
+          />
+          <ProjectNote
+            title="Language Learners News Reader"
+            description="A news reader that retrieves news from different sources around the world"
           />
         </div>
       </Slide>
