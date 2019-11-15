@@ -82,6 +82,8 @@ export default function Contact() {
       <div>
         <Slide in="true" direction="left" timeout={1400}>
           <form name="contact" method="post" className={classes.msgNote}>
+            <input type="hidden" name="form-name" value="contact" />
+
             <input
               className={classes.msgInput}
               placeholder="name"
