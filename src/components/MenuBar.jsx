@@ -68,10 +68,10 @@ export default function MenuBar(props) {
           </li>
           <li>
             <div>
-              <IconButton>
+              <IconButton href={"https://github.com/willjopling"}>
                 <GitHubIcon className={classes.icon} />
               </IconButton>
-              <IconButton>
+              <IconButton href={"https://www.linkedin.com/in/william-jopling/"}>
                 <LinkedInIcon className={classes.icon} />
               </IconButton>
             </div>

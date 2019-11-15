@@ -32,11 +32,12 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "transparent",
     border: "1px solid",
     borderRadius: "10%",
-    color: "#ff1a1a",
+    color: "#3f51b5",
     padding: "5px",
 
     "&:hover": {
-      backgroundColor: "#ff4d4d"
+      backgroundColor: "rgba(63, 81, 181, 0.6)",
+      cursor: "pointer"
     },
 
     transition: ".5s ease"
@@ -69,26 +70,38 @@ export default function Contact() {
   return (
     <div className={classes.root}>
       <div clasName={classes.backgroundElements}></div>
+
       <div>
         <Slide in="true" direction="left" timeout={1200}>
-          <h1 variant="h1" className={classes.title}>
-            Contact
-          </h1>
+          <Typography variant="h1" className={classes.title}>
+            Get in touch...
+          </Typography>
         </Slide>
       </div>
+
       <div>
         <Slide in="true" direction="left" timeout={1400}>
-          <div className={classes.msgNote}>
-            <input className={classes.msgInput} placeholder="name"></input>
+          <form name="contact" method="post" className={classes.msgNote}>
+            <input
+              className={classes.msgInput}
+              placeholder="name"
+              name="name"
+            ></input>
 
-            <input className={classes.msgInput} placeholder="email"></input>
+            <input
+              className={classes.msgInput}
+              placeholder="email"
+              name="email"
+            ></input>
 
             <textarea
               placeholder="message"
               className={classes.message}
             ></textarea>
-            <button className={classes.sendButton}>Send</button>
-          </div>
+            <button className={classes.sendButton} type="submit">
+              Send
+            </button>
+          </form>
         </Slide>
       </div>
     </div>
