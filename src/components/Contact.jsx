@@ -15,12 +15,6 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "2em"
   },
   title: {
-    "&:before": {
-      content: '"<h1>"',
-      fontSize: "14px",
-      display: "block"
-    },
-
     fontSize: "50px"
   },
 

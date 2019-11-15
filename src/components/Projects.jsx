@@ -39,11 +39,18 @@ export default function Projects(props) {
           <ProjectNote
             title="DND Character Sheet"
             description="An online character sheet for the table top board game 'Dungeons and Dragons'."
-            source={require("./untit.jpg")}
+            source={require("../assets/dndcharsheet.png")}
+            siteLink={"https://hopeful-bell-1ed5fd.netlify.com/"}
+            repo={"https://github.com/willjopling/dnd-Character-Sheet"}
           />
           <ProjectNote
             title="Language Learners News Reader"
             description="A news reader that retrieves news from different sources around the world"
+            source={require("../assets/languagelearnersnews.png")}
+            siteLink={"https://language-learners-news.herokuapp.com/"}
+            repo={
+              "https://github.com/willjopling/language-learners-news-reader"
+            }
           />
         </div>
       </Slide>

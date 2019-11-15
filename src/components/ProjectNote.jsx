@@ -15,13 +15,15 @@ const useStyles = makeStyles({
     position: "relative",
     display: "inline-block",
     overflow: "hidden",
-    width: "300px",
-    height: "250px"
+    width: "500px",
+    height: "350px"
   },
 
   image: {
     display: "inline-block",
-    verticalAlign: "middle"
+    verticalAlign: "middle",
+    maxWidth: "99%",
+    border: "3px solid"
   },
 
   slideInContent: {
@@ -64,16 +66,16 @@ export default function ProjectNote(props) {
           <h4>{props.title}</h4>
           <p>{props.description}</p>
           <div className={classes.btnContainer}>
-            <Button variant="outlined" color="secondary">
+            <Button variant="outlined" color="secondary" href={props.siteLink}>
               Live Site
             </Button>
-            <Button variant="outlined" color="secondary">
+            <Button variant="outlined" color="secondary" href={props.repo}>
               Repo
             </Button>
           </div>
         </div>
       </Collapse>
-      <img src={require("./untit.jpg")} className={classes.image}></img>
+      <img src={props.source} className={classes.image}></img>
     </div>
   );
 }
