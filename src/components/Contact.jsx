@@ -97,7 +97,6 @@ export default function Contact() {
             ></input>
 
             <textarea
-              name="message"
               placeholder="message"
               className={classes.message}
             ></textarea>
