@@ -97,9 +97,12 @@ const Contact = () => {
       <Container>
         <ContactFormContainer>
           <Slide in="true" direction="left" timeout={1400}>
-            <ContactForm>
-              <ContactInput type="hidden" name="form-name" value="contact" />
-
+            <ContactForm
+              name="contact"
+              netlify
+              netlify-honeypot="bot-field"
+              hidden
+            >
               <ContactInput placeholder="name" name="name"></ContactInput>
 
               <ContactInput placeholder="email" name="email"></ContactInput>

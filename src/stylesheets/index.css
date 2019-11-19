@@ -41,3 +41,47 @@ p {
     margin: auto;
   }
 }
+
+.contact-form {
+  width: 14em;
+  height: 20em;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #1a1a1a;
+}
+
+.contact-input {
+  height: 10%;
+  border: none;
+  border-bottom: 2px solid;
+  background: transparent;
+  color: white;
+  font-family: arial;
+}
+
+.message {
+  height: 40%;
+  border: 2px solid;
+  border-radius: 10px;
+  color: white;
+  background: transparent;
+  padding: 10px;
+  font-family: arial;
+}
+
+.send-button {
+  background: transparent;
+  color: #3f51b5;
+  border: 3px solid;
+  border-radius: 10px;
+  align-self: flex-end;
+  font-family: arial;
+  transition: 0.3s ease;
+}
+
+.send-button :hover {
+  color: #80ccff;
+  cursor: pointer;
+}
