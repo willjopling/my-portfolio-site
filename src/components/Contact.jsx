@@ -107,7 +107,7 @@ const Contact = () => {
 
               <ContactInput placeholder="email" name="email"></ContactInput>
 
-              <Message placeholder="message"></Message>
+              <Message placeholder="message" name="message"></Message>
               <SendButton type="submit">Send</SendButton>
             </ContactForm>
           </Slide>
