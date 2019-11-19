@@ -60,7 +60,7 @@ export default function Home() {
 
       <Slide in="true" direction="left" timeout={1200}>
         <div className={classes.about}>
-        <h4>Front End Developer.</h4>
+          <h4>Front End Developer.</h4>
           <p style={{ fontSize: "1em" }}>
             Since graduating University, I have dedicated as much time as I
             could to learning programming and the challenges that come with

@@ -6,6 +6,7 @@ function App() {
   return (
     <div>
       <MenuBar />
+      <div className="page-background"></div>
     </div>
   );
 }

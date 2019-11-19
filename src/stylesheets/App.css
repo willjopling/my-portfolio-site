@@ -43,17 +43,3 @@ li {
   align-self: center;
   justify-self: center;
 }
-
-.page-background {
-  width: 100%;
-  height: 100%;
-  background: url("../assets/codeBG.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  opacity: 0.3;
-  z-index: -1;
-  margin-left: 40%;
-  box-shadow: inset 10px 0px 30px 30px #262626;
-  border-radius: 30%;
-}

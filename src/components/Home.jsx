@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
+import JS from "../assets/JS.svg";
+import ReactSVG from "../assets/react.svg";
 
 import { Typography, Slide, Fade } from "@material-ui/core";
 
@@ -19,6 +21,10 @@ const Container = styled.div`
       padding: 1em;
     }
   `}
+`;
+
+const Logo = styled.img`
+  max-width: 200px;
 `;
 
 const Home = () => (
@@ -42,6 +48,8 @@ const Home = () => (
         software is developed is something that really appeals to me.
       </p>
     </Slide>
+    <img src={JS} style={{ maxWidth: "200px" }}></img>
+    <img src={ReactSVG} style={{ maxWidth: "300px" }}></img>
   </Container>
 );
 export default Home;
