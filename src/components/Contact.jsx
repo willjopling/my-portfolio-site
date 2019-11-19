@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Slide, Typography as EM } from "@material-ui/core";
+import { Slide, Typography } from "@material-ui/core";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
+import "../stylesheets/index.css";
 
 const Container = styled.div`
   width: 95%;
@@ -90,21 +91,37 @@ const Contact = () => {
   return (
     <div>
       <Slide in="true" direction="left" timeout={1200}>
-        <EM variant="h1" style={{ marginLeft: "1em" }}>
+        <Typography variant="h1" style={{ marginLeft: "1em" }}>
           Get in touch...
-        </EM>
+        </Typography>
       </Slide>
       <Container>
         <ContactFormContainer>
           <Slide in="true" direction="left" timeout={1400}>
-            <ContactForm name="contact" method="post">
-              <ContactInput placeholder="name" name="name"></ContactInput>
+            <form name="contact" method="post" class="contact-form">
+              <input
+                class="contact-input"
+                placeholder="name"
+                type="text"
+                name="name"
+              ></input>
 
-              <ContactInput placeholder="email" name="email"></ContactInput>
+              <input
+                class="contact-input"
+                placeholder="email"
+                type="email"
+                name="email"
+              ></input>
 
-              <Message placeholder="message" name="message"></Message>
-              <SendButton type="submit">Send</SendButton>
-            </ContactForm>
+              <textarea
+                placeholder="message"
+                name="message"
+                class="message"
+              ></textarea>
+              <button type="submit" class="send-button">
+                Send
+              </button>
+            </form>
           </Slide>
         </ContactFormContainer>
         <Slide in={true} direction="left" timeout={1600}>
