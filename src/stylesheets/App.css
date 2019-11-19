@@ -39,26 +39,9 @@
   opacity: 1;
 }
 
-#menu-bar {
-  padding: 0;
-  display: grid;
-  list-style-type: none;
-  background-color: #1a1a1a;
-
-  height: 100%;
-  margin: 0;
-}
-
 li {
   align-self: center;
   justify-self: center;
-}
-
-#display-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  flex: 10;
 }
 
 .page-background {
