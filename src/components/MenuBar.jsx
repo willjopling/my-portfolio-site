@@ -51,7 +51,12 @@ const MenuBar = () => {
   const DisplayContainer = styled.div`
     flex: 7;
     display: block;
-    overflow: scroll;
+
+    ${css`
+      @media (max-width: 800px) {
+        overflow-y: scroll;
+      }
+    `}
   `;
 
   return (
