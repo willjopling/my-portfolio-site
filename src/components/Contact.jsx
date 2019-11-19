@@ -97,12 +97,7 @@ const Contact = () => {
       <Container>
         <ContactFormContainer>
           <Slide in="true" direction="left" timeout={1400}>
-            <ContactForm
-              name="contact"
-              netlify
-              netlify-honeypot="bot-field"
-              hidden
-            >
+            <ContactForm name="contact" method="post">
               <ContactInput placeholder="name" name="name"></ContactInput>
 
               <ContactInput placeholder="email" name="email"></ContactInput>
