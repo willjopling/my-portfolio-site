@@ -1,111 +1,126 @@
-import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core";
-import { TextField, Paper, Slide, Typography, Button } from "@material-ui/core";
+import React, { useState } from "react";
+import { Slide, Typography as EM } from "@material-ui/core";
+import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    position: "fixed",
-    height: "100%",
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-around",
-    alignItems: "flex-start",
+const Container = styled.div`
+  width: 95%;
+  height: 100%;
+  display: flex;
+  padding: 30px
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.5em;
+  text-align: center;
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-left: 1em;
+  ${css`
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+  `}
+`;
 
-    marginLeft: "2em"
-  },
-  title: {
-    fontSize: "50px"
-  },
+const ContactFormContainer = styled.div`
+  flex: 1;
+`;
 
-  msgNote: {
-    padding: "10px",
-    width: "300px",
-    height: "400px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    background: "#1a1a1a"
-  },
-  sendButton: {
-    alignSelf: "flex-end",
-    backgroundColor: "transparent",
-    border: "1px solid",
-    borderRadius: "10%",
-    color: "#3f51b5",
-    padding: "5px",
+const ContactForm = styled.form`
+  width: 14em;
+  height: 20em;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #1a1a1a;
+`;
 
-    "&:hover": {
-      backgroundColor: "rgba(63, 81, 181, 0.6)",
-      cursor: "pointer"
-    },
+const ContactInput = styled.input`
+  height: 10%;
+  border: none;
+  border-bottom: 2px solid;
+  background: transparent;
+  color: white;
+  font-family: arial;
+`;
 
-    transition: ".5s ease"
-  },
+const Message = styled.textarea`
+  height: 40%;
+  border: 2px solid;
+  border-radius: 10px;
+  color: white;
+  background: transparent;
+  padding: 10px;
+  font-family: arial;
+`;
 
-  msgInput: {
-    padding: "10px",
-    boxSizing: "border-box",
-    border: "none",
-    borderBottom: "1px solid  #a6a6a6",
-    background: "#4d4d4d",
-    color: "#a6a6a6"
-  },
-
-  message: {
-    background: "#4d4d4d",
-    border: "none",
-    height: "50%",
-    padding: "5px",
-    color: "#a6a6a6",
-    fontFamily: "arial"
+const SendButton = styled.button`
+  background: transparent;
+  color: #3f51b5;
+  border: 3px solid;
+  border-radius: 10px;
+  align-self: flex-end;
+  font-family: arial;
+  transition: 0.3s ease;
+  &: hover {
+    color: #80ccff;
+    cursor: pointer;
   }
-}));
+`;
 
-export default function Contact() {
-  const classes = useStyles();
+const Em = styled.h4`
+  font-size: 1em;
+  color: white;
+  transition: 0.5s ease;
+  padding: 5px;
+  ${css`
+    &: hover {
+      font-size: 1.5em;
+      color: #b3e0ff;
+      cursor: default;
+    }
+  `}
+`;
+
+const Contact = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
   return (
-    <div className={classes.root}>
-      <div clasName={classes.backgroundElements}></div>
+    <div>
+      <Slide in="true" direction="left" timeout={1200}>
+        <EM variant="h1" style={{ marginLeft: "1em" }}>
+          Get in touch...
+        </EM>
+      </Slide>
+      <Container>
+        <ContactFormContainer>
+          <Slide in="true" direction="left" timeout={1400}>
+            <ContactForm>
+              <ContactInput type="hidden" name="form-name" value="contact" />
 
-      <div>
-        <Slide in="true" direction="left" timeout={1200}>
-          <Typography variant="h1" className={classes.title}>
-            Get in touch...
-          </Typography>
+              <ContactInput placeholder="name" name="name"></ContactInput>
+
+              <ContactInput placeholder="email" name="email"></ContactInput>
+
+              <Message placeholder="message"></Message>
+              <SendButton type="submit">Send</SendButton>
+            </ContactForm>
+          </Slide>
+        </ContactFormContainer>
+        <Slide in={true} direction="left" timeout={1600}>
+          <div>
+            <p style={{ padding: "10px" }}>
+              If you want to get in touch to talk about work, projects, or just
+              to say hi. You can fill out the form here or email me at:
+            </p>
+            <Em>willjopling@gmail.com</Em>
+          </div>
         </Slide>
-      </div>
-
-      <div>
-        <Slide in="true" direction="left" timeout={1400}>
-          <form name="contact" method="post" className={classes.msgNote}>
-            <input type="hidden" name="form-name" value="contact" />
-
-            <input
-              className={classes.msgInput}
-              placeholder="name"
-              name="name"
-            ></input>
-
-            <input
-              className={classes.msgInput}
-              placeholder="email"
-              name="email"
-            ></input>
-
-            <textarea
-              placeholder="message"
-              className={classes.message}
-            ></textarea>
-            <button className={classes.sendButton} type="submit">
-              Send
-            </button>
-          </form>
-        </Slide>
-      </div>
+      </Container>
     </div>
   );
-}
+};
+
+export default Contact;

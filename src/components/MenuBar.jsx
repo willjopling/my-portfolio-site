@@ -39,7 +39,7 @@ const MenuBar = () => {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     ${css`
       @media (max-width: 800px) {
         flex-direction: row;
@@ -92,7 +92,8 @@ const MenuBar = () => {
         >
           Contact
         </Button>
-        <div>
+
+        <div style={{ justifySelf: "flex-end" }}>
           <IconButton
             style={{ color: "white" }}
             href={"https://github.com/willjopling"}
