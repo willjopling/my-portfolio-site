@@ -98,16 +98,16 @@ const Contact = () => {
       <Container>
         <ContactFormContainer>
           <Slide in="true" direction="left" timeout={1400}>
-            <form name="contact" method="post" class="contact-form">
+            <form name="contact" method="post" className="contact-form">
               <input
-                class="contact-input"
+                className="contact-input"
                 placeholder="name"
                 type="text"
                 name="name"
               ></input>
 
               <input
-                class="contact-input"
+                className="contact-input"
                 placeholder="email"
                 type="email"
                 name="email"
@@ -116,9 +116,9 @@ const Contact = () => {
               <textarea
                 placeholder="message"
                 name="message"
-                class="message"
+                className="message"
               ></textarea>
-              <button type="submit" class="send-button">
+              <button type="submit" className="send-button">
                 Send
               </button>
             </form>
