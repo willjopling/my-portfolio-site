@@ -23,10 +23,6 @@ const Container = styled.div`
   `}
 `;
 
-const Logo = styled.img`
-  max-width: 200px;
-`;
-
 const Home = () => (
   <Container>
     <Slide in={true} direction="left" timeout={800}>
@@ -48,8 +44,12 @@ const Home = () => (
         software is developed is something that really appeals to me.
       </p>
     </Slide>
-    <img src={JS} style={{ maxWidth: "200px" }}></img>
-    <img src={ReactSVG} style={{ maxWidth: "300px" }}></img>
+    <Slide in={true} direction="left" timeout={1800}>
+      <div>
+        <img src={JS} style={{ maxWidth: "200px" }}></img>
+        <img src={ReactSVG} style={{ maxWidth: "300px" }}></img>
+      </div>
+    </Slide>
   </Container>
 );
 export default Home;
