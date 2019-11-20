@@ -99,6 +99,7 @@ const Contact = () => {
         <ContactFormContainer>
           <Slide in="true" direction="left" timeout={1400}>
             <form name="contact" method="post" className="contact-form">
+              <input type="hidden" name="form-name" value="contact" />
               <input
                 className="contact-input"
                 placeholder="name"
